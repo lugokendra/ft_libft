@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kelugo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: kendralugo <kendralugo@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/19 18:12:56 by kelugo            #+#    #+#             */
-/*   Updated: 2019/02/20 15:50:35 by kelugo           ###   ########.fr       */
+/*   Created: 2019/02/24 18:15:44 by kelugo            #+#    #+#             */
+/*   Updated: 2019/03/11 21:19:28 by kendralugo       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include <string.h>
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-	if (c >= "A" && c <= "Z")
-			return (c + 32);
-	return (c);
+	ft_memset(s, 0, n);
 }

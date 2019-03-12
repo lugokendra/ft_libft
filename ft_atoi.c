@@ -3,31 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kelugo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: kendralugo <kendralugo@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 20:51:28 by kelugo            #+#    #+#             */
-/*   Updated: 2019/02/20 16:00:12 by kelugo           ###   ########.fr       */
+/*   Updated: 2019/03/11 21:19:35 by kendralugo       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
-	int i;
+	int ndx;
 	int sign;
 	int nbr;
 
-	i = 0;
+	ndx = 0;
 	sign = 1;
 	nbr = 0;
-	if (!str[i])
+	if (!str[ndx])
 		return (0);
-	while (str[i] == '\t' || str[i] == '\v' || str[i] == '\n' ||
-			str[i] == '\r' || str[i] == '\f' || str[i] == ' ')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-		if (str[i++] == '-')
+	while (str[ndx] == '\t' || str[ndx] == '\v' || str[ndx] == '\n' ||
+			str[ndx] == '\r' || str[ndx] == '\f' || str[ndx] == ' ')
+		ndx++;
+	if (str[ndx] == '-' || str[ndx] == '+')
+		if (str[ndx++] == '-')
 			sign = -1;
-	while (str[i] >= '0' && str[i] <= '9')
-		nbr = (nbr * 10) + (str[i++] - '0');
+	while (str[ndx] >= '0' && str[ndx] <= '9')
+		nbr = (nbr * 10) + (str[ndx++] - '0');
 	return (nbr * sign);
 }
